@@ -1,0 +1,28 @@
+---
+label: FAQ
+hide_body: true
+fields:
+- name: faq
+  type: blocks
+  label: FAQ
+  template_types:
+  - qna
+  config:
+    min: 
+    max: 
+- name: layout
+  type: text
+  config:
+    required: false
+  label: Layout
+  hidden: true
+  default: faq
+- name: permalink
+  type: text
+  config:
+    required: false
+  label: Permalink
+  hidden: true
+  default: "/faq/"
+pages:
+- FAQ.md

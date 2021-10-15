@@ -1,0 +1,62 @@
+@import "../utilities/derived-variables"
+
+// $footer-background-color: $scheme-main-bis !default
+$footer-background-color: $background
+$footer-color: false !default
+// $footer-padding: 3rem 1.5rem 6rem !default
+$footer-padding: 2.5rem 1.5rem 2rem !default
+$clr-footer: linear-gradient(45deg, #D1E0FE, #D1E0FE 40%, #DECDF4 60%, #DECDF4)
+
+.footer-container
+  position: relative
+  background: $clr-footer
+  margin-top: 2rem
+  z-index: 0
+
+.footer
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  margin: auto
+  max-width: $max-width
+  padding: $footer-padding
+  height: 3.25rem
+  
+  @if $footer-color
+    color: $footer-color
+  
+.slogan
+  font-size: $size-3
+  font-weight: $weight-black
+  text-transform: uppercase
+  color: transparent
+
+  background: linear-gradient(30deg, #EA77AF, #CA87CF, #BE8DDC, #B493E6,#B493E6, #EA77AF, #CA87CF, #EA77AF, #EA77AF, #CA87CF, #BE8DDC, #B493E6,#B493E6, #CA87CF, #BE8DDC, #EA77AF,#EA77AF, #CA87CF, #BE8DDC, #B493E6)
+  background-size: 200% auto
+  // background: linear-gradient(to bottom, #EA77AF 40%, #CA87CF 60%, #BE8DDC 80%, #B493E6)
+  -webkit-text-stroke: 1px #B2B2D5
+  -webkit-background-clip: text
+  background-clip: text
+  animation: alex 11s linear infinite
+
+@keyframes alex
+  to
+    background-position: -200% center
+
+@media (max-width: $desktop)
+  $footer-padding: 1rem 1.5rem 0.5rem
+
+  .footer
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    height: fit-content
+    padding: $footer-padding
+
+    text-align: center
+  
+  .slogan
+    font-size: $size-4
+

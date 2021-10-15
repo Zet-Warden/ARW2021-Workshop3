@@ -1,0 +1,12 @@
+:root {
+    --clr-drk-blue: #293462;
+    --clr-blond: #fff1c1;
+    --clr-orange-red: #fe5f55;
+    --clr-brown: #a64942;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,34 @@
+---
+label: Contestant
+hide_body: true
+fields:
+- name: org_name
+  type: text
+  config:
+    required: false
+  label: Organization Name
+- name: abbr
+  type: text
+  config:
+    required: true
+  label: Org Name Abbreviation
+- name: full_name
+  type: text
+  config:
+    required: true
+  label: Person's Full Name
+- name: formal_shot
+  type: file
+  config:
+    maxSize: 10
+  label: Formal Shot
+- name: creative_shot
+  type: file
+  config:
+    maxSize: 10
+  label: Creative Shot
+- name: vid_link
+  type: text
+  config:
+    required: true
+  label: Video Link

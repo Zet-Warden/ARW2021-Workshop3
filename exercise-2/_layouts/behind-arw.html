@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include head.html %}
+    <body>
+        {% include header.html %}
+        <div
+            class="
+                section
+                has-text-centered
+                full-height
+                is-flex is-flex-direction-column is-justify-content-center
+            "
+        >
+            <figure class="image banner">
+                <picture>
+                    <source
+                        srcset="
+                            {{site.baseurl}}/assets/img/behind-arw-banner-mobile.png
+                        "
+                        media="(max-width: 800px)"
+                    />
+                    <img
+                        class="banner-img"
+                        src="{{site.baseurl}}/assets/img/behind-arw-banner.png"
+                        alt="ARW 2021 Central Committee Banner"
+                    />
+                </picture>
+            </figure>
+        </div>
+        <div class="buffer quarter-height">
+            <!-- Ribbon image goes here-->
+        </div>
+        <div
+            class="
+                section
+                is-small
+                mt-6
+                is-flex is-flex-direction-column is-justify-content-center
+            "
+        >
+            <div class="full-height">
+                <div class="decoration-wrapper">
+                    <div
+                        class="
+                            container
+                            has-text-centered
+                            glass-container
+                            gradient
+                            glass
+                        "
+                    >
+                        <h1 class="title inner-text-shadow blue">WHO WE ARE</h1>
+                        <p class="block" style="color: #553c78">
+                            {{page.who_we_are}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section full-height">
+            <div class="container">
+                <h1 class="title inner-text-shadow blue">PROJECT HEADS</h1>
+                <p
+                    class="block has-text-justified has-text-weight-medium"
+                    style="color: #553c78"
+                >
+                    {{page.project_heads}}
+                </p>
+                <div class="pheads-grid">
+                    {% for img in page.project_heads_images%}
+                    <img
+                        class="phead-img"
+                        src="{{site.baseurl}}{{img}}"
+                        alt="Project Head of ARW"
+                    />
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="section is-small full-height">
+            <div class="container">
+                <h1 class="title inner-text-shadow blue">
+                    EXECUTIVE COMMITTEE
+                </h1>
+                <p
+                    class="block has-text-justified has-text-weight-medium"
+                    style="color: #553c78"
+                >
+                    {{page.executive_committee}}
+                </p>
+                <div class="execom-grid">
+                    {% for img in page.executive_committee_images %}
+                    <img
+                        class="execom-img"
+                        src="{{site.baseurl}}{{img}}"
+                        alt=""
+                    />
+                    <img
+                        class="execom-img"
+                        src="{{site.baseurl}}{{img}}"
+                        alt=""
+                    />
+                    <img
+                        class="execom-img"
+                        src="{{site.baseurl}}{{img}}"
+                        alt=""
+                    />
+                    <img
+                        class="execom-img"
+                        src="{{site.baseurl}}{{img}}"
+                        alt=""
+                    />
+                    <img
+                        class="execom-img"
+                        src="{{site.baseurl}}{{img}}"
+                        alt=""
+                    />
+                    <img
+                        class="execom-img"
+                        src="{{site.baseurl}}{{img}}"
+                        alt=""
+                    />
+                    <img
+                        class="execom-img"
+                        src="{{site.baseurl}}{{img}}"
+                        alt=""
+                    />
+                    <img
+                        class="execom-img"
+                        src="{{site.baseurl}}{{img}}"
+                        alt=""
+                    />
+                    <img
+                        class="execom-img"
+                        src="{{site.baseurl}}{{img}}"
+                        alt=""
+                    />
+                    <img
+                        class="execom-img"
+                        src="{{site.baseurl}}{{img}}"
+                        alt=""
+                    />
+                    <img
+                        class="execom-img"
+                        src="{{site.baseurl}}{{img}}"
+                        alt=""
+                    />
+                    <img
+                        class="execom-img"
+                        src="{{site.baseurl}}{{img}}"
+                        alt=""
+                    />
+                    <img
+                        class="execom-img"
+                        src="{{site.baseurl}}{{img}}"
+                        alt=""
+                    />
+                    <img
+                        class="execom-img"
+                        src="{{site.baseurl}}{{img}}"
+                        alt=""
+                    />
+                    <img
+                        class="execom-img"
+                        src="{{site.baseurl}}{{img}}"
+                        alt=""
+                    />
+                    <img
+                        class="execom-img"
+                        src="{{site.baseurl}}{{img}}"
+                        alt=""
+                    />
+                    <img
+                        class="execom-img"
+                        src="{{site.baseurl}}{{img}}"
+                        alt=""
+                    />
+                    <img
+                        class="execom-img"
+                        src="{{site.baseurl}}{{img}}"
+                        alt=""
+                    />
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="section is-small full-height">
+            <div class="container">
+                <h1 class="title inner-text-shadow blue">EXECUTIVES</h1>
+                <p
+                    class="block has-text-justified has-text-weight-medium"
+                    style="color: #553c78"
+                >
+                    {{page.executives}}
+                </p>
+                <div class="exec-grid">
+                    {% for committee in site.data.committees %}
+                    <div
+                        class="
+                            exec-card
+                            gradient
+                            glass
+                            {%
+                            if
+                            forloop.index
+                            ==
+                            4
+                            %}
+                            span-2
+                            {%
+                            endif
+                            %}
+                        "
+                    >
+                        <p class="title">{{ committee.title }}</p>
+                        <div class="content">
+                            {% for member in committee.members %}
+                            <p class="name">{{ member }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% include footer.html %}
+    </body>
+</html>

@@ -1,0 +1,3 @@
+This exercise tests creating responsive design by implementing layouts for both dekstop and mobile view as seen under the design folder. Knowledge of media queries will be helpful in creating the design that responds to any screen-width. Of course, CSS skills that you have developed will also be put to the test in matching the corresponding design.
+
+Solution for this exercise can be found inside this folder. Feel free to check it whenever you get stuck.

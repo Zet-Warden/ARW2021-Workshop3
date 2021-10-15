@@ -1,0 +1,111 @@
+.nav-container
+  position: fixed
+  top: 0
+  left: 0
+  
+  width: 100vw
+  background: $clr-header
+  box-shadow: 0px 5px 10px #00000040
+  z-index: 30
+
+.nav-container::before
+  content: ''
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 1px
+
+  height: 1px
+  background: linear-gradient(45deg, #CAD2FB, #CAD2FB 40%, #D4BBF1 60%, #D4BBF1)
+
+.nav-container::after
+  content: ''
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 0
+
+  height: 1px
+  background: linear-gradient(45deg, #C2C5F9, #C2C5F9 40%, #cfb4f3 60%, #CFB4EF)
+
+.navbar
+  position: static
+  background: transparent
+
+.search-bar
+  position: relative
+
+  border: none
+  border-radius: 50px
+  background-color: #B9C2E4
+  padding: 0.35rem 1rem
+  padding-right: 1.75rem
+
+  box-shadow: inset 0px 3px 4px #7e8394
+  font-size: 1rem
+
+  &:focus,
+  &:hover
+    outline: 3px solid $clr-main-lavender
+
+.search-icon
+  cursor: pointer
+  margin: -28px
+  z-index: 1
+
+.navbar-item
+  color: $clr-sub-grape
+  margin-bottom: 0
+
+  .logos
+    max-height: 3.25rem
+
+  &:focus, 
+  &:focus-within, 
+  &:hover
+    background-color: transparent !important
+
+.navbar-item.home
+  margin: 0.5rem
+  padding: 0
+
+  &:focus-visible
+    outline: none
+
+@media (max-width: 1300px)
+  .navbar-item.form
+    display: none
+
+@media (max-width: $desktop)
+  .navbar-end
+    display: flex
+    flex-direction: column
+    align-items: center
+  
+  .navbar-burger
+    height: auto
+
+  .navbar-menu
+    display: block
+    position: absolute
+    top: -500px
+
+    background: linear-gradient(45deg, #D1E0FE, #D1E0FE 65%, #DECDF4 75%, #DECDF4)
+    width: 100%
+    z-index: -1
+    transform: translateY(-400px)
+    transition: transform 450ms ease-out
+
+  .navbar-menu.is-active
+    top: 100%
+    transform: translateY(0)
+
+  .navbar-menu.is-closing
+    top: 100%
+    transform: translateY(-400px)
+
+  .navbar-item:not(:first-child)
+    margin-top: 0.5rem
+  
+  .navbar-item.form
+    margin: 0

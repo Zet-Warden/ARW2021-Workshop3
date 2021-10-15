@@ -1,0 +1,77 @@
+$clr-main-cyan: #92ddea
+$clr-main-blue: #3C5878
+$clr-main-pink: #ffa5d8
+$clr-main-lavender: #be9ddf
+$clr-main-purple: #9579d1
+
+$clr-sub-red: #883A5D
+$clr-sub-violet: #b35399
+$clr-sub-grape: #58477d
+$clr-sub-gray: #9b9b9d
+
+$clr-footer: linear-gradient(45deg, #D1E0FE, #D1E0FE 40%, #DECDF4 60%, #DECDF4)
+$clr-header: linear-gradient(45deg, #D1E0FE, #D1E0FE 40%, #DECDF4 60%, #DECDF4)
+
+*,
+*::before,
+*::after
+  box-sizing: border-box
+
+html
+  height: 100%
+  background-color: $background
+  scroll-behavior: smooth
+
+body
+  display: flex
+  flex-direction: column
+  min-height: 100%
+  margin: 0 auto
+
+  background-color: $background
+
+html
+  @extend .has-navbar-fixed-top
+
+.navbar
+  @extend .is-fixed-top
+
+.has-letter-spacing
+  letter-spacing: 5px
+
+@media (max-width: 768px)
+  .columns.is-centered .column
+    margin: auto
+
+#arw-footer-logo
+  height: 3.25rem
+
+@media (min-width: $desktop)
+  .is-full-height
+    height: 100% !important
+
+@media (max-width: $max-width)
+  body
+    height: fit-content
+    overflow: hidden
+  
+.grape, .purple
+  color: $clr-sub-grape
+
+.light-pink
+  color: $clr-sub-red
+
+.sky-blue
+  color: $clr-main-blue
+
+.pink-title-gradient
+  color: transparent
+  background: linear-gradient(#e999d7, #a083c4)
+  background-clip: text
+  -webkit-background-clip: text
+
+span.delete-btn
+  position: absolute
+  top: 0
+  right: 0
+  color: #a083c4

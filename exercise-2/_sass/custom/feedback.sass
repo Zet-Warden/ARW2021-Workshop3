@@ -1,0 +1,59 @@
+#rating-stars
+  font-size: 45px
+  overflow: hidden
+  direction: rtl
+  $color: orange
+
+  a
+    color: #aaa
+    text-decoration: none
+    -webkit-transition: color .4s
+    -moz-transition: color .4s
+    -o-transition: color .4s
+    transition: color .4s
+
+    &:hover,
+    &:hover ~ a,
+    &:focus,
+    &:focus ~ a
+      color: $color
+      cursor: pointer
+
+  .selected
+    color: $color
+
+.notification
+  position: fixed
+  bottom: 0
+  right: 1%
+
+  transform: scale(0)
+  transform-origin: bottom right
+  
+.notification.is-active
+  animation-delay: 300ms
+  animation: grow 300ms linear forwards
+
+.notification.is-closed
+  animation-delay: 300ms
+  animation: shrink 300ms linear forwards
+
+.button.grape,
+.button.grape:hover
+  color: $clr-sub-grape
+
+@keyframes grow 
+  from 
+    transform: scale(0) 
+  to 
+    transform: scale(1)
+
+@keyframes shrink
+  from 
+    transform: scale(1)
+  to 
+    transform: scale(0)
+  
+
+  
+ 
